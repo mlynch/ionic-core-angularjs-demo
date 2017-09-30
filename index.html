@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <script src='https://unpkg.com/@ionic/core@0.0.2-20/dist/ionic.js'></script>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <ion-app>
+      <ion-page class="show-page" ng-controller="RootCtrl">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Ionic 4 + AngularJS</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="content">
+          <form ng-submit="handleSubmit($event)">
+            <ion-list>
+              <ion-item>
+                <ion-label fixed>Your name</ion-label>
+                <input type="text" ng-model="data.name" />
+              </ion-item>
+            </ion-list>
+            <ion-button block>Submit</ion-button>
+          </form>
+        </ion-content>
+      </ion-page>
+    </ion-app>
+  </body>
+</html>
